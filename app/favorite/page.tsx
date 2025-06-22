@@ -30,7 +30,7 @@ const FavoritePage = () => {
 
   useEffect(() => {
     if (productsStatus === 'idle') {
-      dispatch(fetchProducts() as any);
+      dispatch(fetchProducts({}) as any);
     }
   }, [dispatch, productsStatus]);
 
