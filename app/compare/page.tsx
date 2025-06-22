@@ -21,7 +21,7 @@ const ComparePage: React.FC = () => {
   const status = useSelector((state: RootState) => state.products.status);
 
   useEffect(() => {
-    dispatch(fetchProducts() as any );
+    dispatch(fetchProducts({}) as any );
   }, [dispatch]);
 
   const comparedProducts = products.filter((p) =>
