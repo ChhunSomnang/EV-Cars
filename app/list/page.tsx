@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useCallback, useState } from "react";
+import React, { useEffect, useCallback, useState, Suspense } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "next/navigation";
 import { CircularProgress } from "@mui/material";
@@ -25,7 +25,85 @@ interface ProductState {
   error: string | null;
 }
 
-const ListPage: React.FC = () => {
+const ListContent = () => {
+  const dispatch = useDispatch<AppDispatch>();
+  const searchParams = useSearchParams();
+  const brandFromQuery = searchParams?.get("brand");
+
+  const { filteredItems, status, items, selectedMakes, error } = useSelector(
+    (state: RootState) => state.products as ProductState
+  );
+
+  // Pagination state and page size
+  const [currentPage, setCurrentPage] = useState(1);
+  const pageSize = 10;
+
+  // Initialize product fetch when idle or failed
+  const initializeProducts = useCallback(() => {
+    if (status === "idle" || status === "failed") {
+      dispatch(fetchProducts({}));
+    }
+  }, [dispatch, status]);
+
+  // Sync selectedMakes with URL brand query param
+  const syncBrandWithUrl = useCallback(() => {
+    if (brandFromQuery) {
+      const brandParam = brandFromQuery.toLowerCase().trim();
+
+      // Try to find a matching brand from items
+      const matchingBrand = items.find((item) => {
+        const itemBrand = (item.brand || "").toLowerCase().trim();
+        return itemBrand === brandParam;
+      });
+
+      const brandToUse = matchingBrand ? matchingBrand.brand : brandFromQuery;
+
+      if (!selectedMakes.includes(brandToUse)) {
+        const updatedMakes = [...selectedMakes, brandToUse];
+        dispatch(setSelectedMakes(updatedMakes));
+        dispatch(applyFilters());
+      }
+    }
+  }, [brandFromQuery, dispatch, items, selectedMakes]);
+
+  // Apply filters after products load or selectedMakes change
+  const applyProductFilters = useCallback(() => {
+    if (status === "succeeded" && items.length > 0) {
+      dispatch(applyFilters());
+    }
+  }, [dispatch, status, items.length]);
+
+  // Effect hooks
+  useEffect(() => {
+    initializeProducts();
+  }, [initializeProducts]);
+
+  useEffect(() => {
+    syncBrandWithUrl();
+  }, [syncBrandWithUrl]);
+
+  useEffect(() => {
+    applyProductFilters();
+  }, [applyProductFilters, selectedMakes]);
+
+  // Reset to first page when filteredItems change
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [filteredItems.length]);
+
+  // Pagination slicing
+  const startIndex = (currentPage - 1) * pageSize;
+  const endIndex = startIndex + pageSize;
+  const paginatedProducts = filteredItems.slice(startIndex, endIndex);
+
+  return (
+    <div>
+      {/* Your existing JSX */}
+    </div>
+  );
+};
+
+const ListContent: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
   const searchParams = useSearchParams();
   const brandFromQuery = searchParams?.get("brand");
@@ -162,6 +240,14 @@ const ListPage: React.FC = () => {
         </div>
       </main>
     </div>
+  );
+};
+
+const ListPage: React.FC = () => {
+  return (
+    <Suspense fallback={<div className="flex justify-center items-center h-screen"><CircularProgress /></div>}>
+      <ListContent />
+    </Suspense>
   );
 };
 
