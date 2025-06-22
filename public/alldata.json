@@ -1,0 +1,91 @@
+{
+  "allcars": [
+    {
+      "id": 1,
+      "name": "Model S",
+      "brand": "Tesla",
+      "model": "Tesla Model S",
+      "category": "Sedan",
+      "price": 79990,
+      "year": 2023,
+      "modelImage": "https://i.pinimg.com/564x/40/aa/75/40aa751bae83de7d334c5e10b65b7775.jpg",
+      "condition": "New",
+      "rating": 5,
+      "phone": "085 666 666",
+      "location": {
+        "lat": 11.567586,
+        "lng": 104.891930
+      },
+      "media": {
+        "items": [
+          {
+            "id": 1,
+            "url": "https://i.pinimg.com/564x/40/aa/75/40aa751bae83de7d334c5e10b65b7775.jpg"
+          },
+          {
+            "id": 2,
+            "url": "https://i.pinimg.com/564x/d5/da/11/d5da11d9d023a866c2999c9c7c54b333.jpg"
+          },
+          {
+            "id": 3,
+            "url": "https://i.pinimg.com/564x/42/82/37/428237ad7f8581c887d716f82706c4f7.jpg"
+          },
+          {
+            "id": 4,
+            "url": "https://i.pinimg.com/564x/0c/39/44/0c3944fe9a9e02dd66fe0b6fa0f95083.jpg"
+          }
+        ]
+      }
+    },
+    
+    {
+      "id": 5,
+      "name": "Leaf",
+      "brand": "Nissan",
+      "model": "Nissan Leaf",
+      "category": "Hatchback",
+      "price": 27990,
+      "modelImage": "https://i.pinimg.com/564x/cb/74/34/cb7434cc73055c33b6ab3553c2a231f9.jpg",
+      "condition": "Used",
+      "rating": 5,
+      "phone": "085 666 666",
+      "location": {
+        "lat": 11.572704,
+        "lng": 104.918800
+      }
+    },
+    {
+      "id": 9,
+      "name": "Taycan",
+      "brand": "Porsche",
+      "model": "Porsche Taycan",
+      "category": "Sport",
+      "price": 79990,
+      "modelImage": "https://i.pinimg.com/564x/42/3b/d8/423bd834d2bb5259ec45a921c599a214.jpg",
+      "condition": "New",
+      "rating": 5
+    },
+    {
+      "id": 13,
+      "name": "i4",
+      "brand": "BMW",
+      "model": "BMW i4",
+      "category": "Sedan",
+      "price": 55990,
+      "modelImage": "https://i.pinimg.com/564x/53/89/49/53894941e207990db689e39e140cd900.jpg",
+      "condition": "New",
+      "rating": 5
+    },
+    {
+      "id": 17,
+      "name": "Mustang Mach-E",
+      "brand": "Ford",
+      "model": "Ford Mustang Mach-E",
+      "category": "SUV",
+      "price": 42990,
+      "modelImage": "https://i.pinimg.com/564x/ee/32/c3/ee32c3c3fdc88b6193a635a50380861f.jpg",
+      "condition": "Used",
+      "rating": 5
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+[
+    {
+      "id": 1,
+      "name": "Portable EV Charger",
+      "category": "Charging Equipment",
+      "price": 350,
+      "brand": "ChargePoint",
+      "model": "CP-2100",
+      "rating": 4.8,
+      "features": [
+        "Compatible with most EVs",
+        "Fast charging up to 7.2 kW",
+        "Weatherproof design"
+      ],
+      "image": "https://i.pinimg.com/736x/5f/85/25/5f85258cee111f24f877a54abef6a209.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Wall-Mounted EV Charger",
+      "category": "Charging Equipment",
+      "price": 700,
+      "brand": "Tesla",
+      "model": "Wall Connector Gen 3",
+      "rating": 4.9,
+      "features": [
+        "Customizable power levels",
+        "Wi-Fi connectivity",
+        "Elegant design"
+      ],
+      "image": "https://i.pinimg.com/736x/5c/29/e9/5c29e93b332f0300ffae7dfc1b536d5e.jpg"
+    },
+    {
+      "id": 3,
+      "name": "EV Charging Cable Organizer",
+      "category": "Accessories",
+      "price": 30,
+      "brand": "Lectron",
+      "model": "CablePro",
+      "rating": 4.5,
+      "features": [
+        "Durable plastic material",
+        "Compatible with all EV cables",
+        "Easy wall mounting"
+      ],
+      "image": "https://i.pinimg.com/736x/6f/72/b8/6f72b8d9d4ee0ea04e2ff979717ea8f6.jpg"
+    },
+    {
+      "id": 4,
+      "name": "EV Battery Tester",
+      "category": "Diagnostic Tools",
+      "price": 200,
+      "brand": "OBDLink",
+      "model": "EV-Scan",
+      "rating": 4.6,
+      "features": [
+        "Supports multiple EV models",
+        "Real-time battery analysis",
+        "User-friendly mobile app"
+      ],
+      "image": "https://i.pinimg.com/736x/e5/23/7f/e5237fb7a0a466aa465f393e5683e392.jpg"
+    },
+    {
+      "id": 8,
+      "name": "EV Tire Inflator",
+      "category": "Maintenance Tools",
+      "price": 65,
+      "brand": "Avid Power",
+      "model": "TireMate X1",
+      "rating": 4.7,
+      "features": [
+        "Digital pressure gauge",
+        "Portable and lightweight",
+        "Auto shut-off"
+      ],
+      "image": "https://i.pinimg.com/736x/c9/f7/99/c9f799299ddb565c0c3c0a26f8190551.jpg"
+    }
+  ]
+  

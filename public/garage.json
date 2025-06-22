@@ -1,0 +1,56 @@
+[
+    {
+      "garage_id": 1,
+      "garage_name": "QuickFix Garage",
+      "location": "123 Main Street, Springfield, IL",
+      "image": "https://i.pinimg.com/736x/cc/02/1c/cc021cb87a9bab38d7593e9fa8a32fde.jpg",  
+      "services": ["Oil Change", "Brake Repair", "Tire Replacement"],
+      "cars_serviced": [
+        {
+          "car_id": 101,
+          "owner": "John Doe",
+          "make": "Toyota",
+          "model": "Camry",
+          "year": 2018,
+          "condition": "Good",
+          "service_history": [
+            {
+              "service_id": 1,
+              "service_type": "Oil Change",
+              "date": "2025-01-10"
+            },
+            {
+              "service_id": 2,
+              "service_type": "Brake Repair",
+              "date": "2024-12-05"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "garage_id": 2,
+      "garage_name": "Elite Auto Center",
+      "location": "456 High Street, Chicago, IL",
+      "image": "https://i.pinimg.com/736x/95/26/d1/9526d1a051791cf7a0af099bd883133a.jpg",  
+      "services": ["Engine Repair", "Suspension Check", "Detailing"],
+      "cars_serviced": [
+        {
+          "car_id": 103,
+          "owner": "Alice Johnson",
+          "make": "Honda",
+          "model": "Civic",
+          "year": 2020,
+          "condition": "Excellent",
+          "service_history": [
+            {
+              "service_id": 4,
+              "service_type": "Engine Repair",
+              "date": "2024-09-15"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+  

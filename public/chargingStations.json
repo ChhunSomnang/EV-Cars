@@ -1,0 +1,37 @@
+[
+    {
+      "id": 1,
+      "name": "CHARGE+ Charging Station",
+      "address": "Oknha Hing Penn St., Phnom Penh",
+      "status": "Available",
+      "position": [11.573925, 104.920488]
+    },
+    {
+      "id": 2,
+      "name": "EV Energy Tech Charging Station",
+      "address": "63 St 306, Phnom Penh",
+      "status": "Busy",
+      "position": [11.551944, 104.923513]
+    },
+    {
+      "id": 3,
+      "name": "Electric Vehicle Charging Station",
+      "address": "52-36 St 322, Phnom Penh",
+      "status": "Available",
+      "position": [11.550183, 104.921594]
+    },
+    {
+      "id": 4,
+      "name": "Charge+ Charging Station",
+      "address": "HW2V+W2P D.I. Riviera, Koh Pich St, Phnom Penh 12301",
+      "status": "Available",
+      "position": [11.552226, 104.942565]
+    },
+    {
+      "id": 5,
+      "name": "Battambang EV Charging Station",
+      "address": "National Road 5, Battambang",
+      "status": "Available",
+      "position": [13.096069, 103.199076]
+    }
+  ]
